@@ -1,0 +1,181 @@
+@import url('https://fonts.google.com/specimen/Inter');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none !important;
+    list-style: none;
+    font-family: 'Inter';
+}
+
+body {
+    height: 100vh;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+.menu {
+    height: 100%;
+}
+
+.menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    height: 100%;
+}
+
+.menu ul a {
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.menu ul a li {
+    color: hsl(236, 13%, 42%);
+    text-align: center;
+}
+
+.menu ul a li:hover {
+    color: hsl(35, 77%, 62%);
+}
+
+.first-section {
+    /* height: 27rem; */
+}
+
+.big-part {
+    /* height: 28rem; */
+}
+
+.small-part {
+    /* height: 28rem; */
+}
+
+h1 {
+    font-weight: bolder;
+    font-family: 'Inter';
+    color: hsl(240, 100%, 5%);
+}
+
+.big-part-2 p {
+    color: hsl(236, 13%, 42%);
+    font-size: 15px;
+}
+
+.big-part-2-btn {
+    letter-spacing: 0.2rem;
+    --bs-btn-color: white;
+    --bs-btn-bg: hsl(5, 85%, 63%);
+    border-radius: 0%;
+    font-weight: 700px;
+    font-size: 12px;
+    --bs-btn-hover-bg: hsl(240, 100%, 5%);
+    --bs-btn-hover-color: white;
+}
+
+.small-part-wrapper {
+    background-color:hsl(240, 100%, 5%) ;
+}
+
+.small-part-wrapper p {
+    font-size: 13px;
+    color: hsl(236, 13%, 42%);
+}
+
+.small-part-wrapper a {
+    color: white;
+}
+
+.small-part-wrapper a:hover {
+    color: hsl(35, 77%, 62%);
+}
+.small-part-wrapper h2 {
+    color: hsl(35, 77%, 62%);
+}
+
+.second-section-wrappers {
+    display: flex;
+}
+
+.second-section-wrappers h3, p {
+    color: hsl(236, 13%, 42%);
+}
+
+.second-section-wrappers p {
+    font-size: 13px;
+}
+
+.second-section-wrappers a {
+    color: hsl(240, 100%, 5%);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.second-section-wrappers a:hover {
+    color: hsl(35, 77%, 62%) ;
+}
+
+@media (max-width: 767px) {
+    .primary-navigation {
+        gap: 1rem;
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        background: white;
+        padding: min(30vh, 20rem) 2rem;
+        transform: translateX(100%);
+        overflow-y: scroll;
+        transition: 350ms ease-out;
+    }
+
+    .menu ul a li {
+        color: black;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .menu ul {
+        text-align: center;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background: url("/assets/images/icon-menu.svg");
+        background-repeat: no-repeat;
+        width: 2rem;
+        aspect-ratio: 1;
+        top: 3rem;
+        right: 2rem;
+        border: none;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background: url(/assets/images/icon-menu-close.svg);
+    }
+}
+
+@media (min-width: 767px) {
+    .mobile-nav-toggle {
+        display: none;
+    }
+}
+
+.primary-navigation[data-visible="true"] {
+    transform: translateX(0%);
+}
